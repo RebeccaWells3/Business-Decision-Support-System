@@ -8,3 +8,9 @@ The purpose of this project is to build a business decision-support application 
 
 This project is also intended to demonstrate my ability to plan, design, build, test, and document a complete software application while applying professional software engineering practices throughout the development process.
 
+## Functional Requirements
+
+### FR-1: Retrieve Current Economic Data
+
+The system shall retrieve current economic data from a publicly available API to support business analysis.
+
