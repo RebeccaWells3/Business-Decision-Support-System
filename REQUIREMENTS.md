@@ -14,3 +14,23 @@ This project is also intended to demonstrate my ability to plan, design, build, 
 
 The system shall retrieve current economic data from a publicly available API to support business analysis.
 
+### FR-2: Validate Retrieved Data
+
+The system shall validate the retrieved data to ensure the required information is present and usable before any transformation, storage, or analysis occurs.
+
+### FR-3: Transform Retrieved Data
+
+The system shall transform validated data into a consistent structure suitable for storage, querying, and analysis.
+
+### FR-4: Store Transformed Data
+
+The system shall store transformed economic data in a relational database so it can be queried, analyzed, and compared over time.
+
+### FR-5: Analyze Stored Data
+
+The system shall analyze stored economic data to identify trends, significant changes, and other information that supports business decision-making.
+
+### FR-6: Present Analysis Results
+
+The system shall present analysis results through an easy-to-understand web interface that enables Business Analysts to quickly identify important economic changes.
+
