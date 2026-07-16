@@ -1,2 +1,5 @@
 # Business-Decision-Support-System
-A business decision-support application that collects, stores, analyzes, and presents current economic data.
+
+**Project Status:** In Progress
+
+This repository documents the development of my Summer 2026 capstone project. It is being built incrementally while following software engineering practices such as requirements documentation, design planning, testing, version control, and an engineering journal.
