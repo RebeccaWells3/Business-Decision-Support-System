@@ -8,6 +8,10 @@ The purpose of this project is to build a business decision-support application 
 
 This project is also intended to demonstrate my ability to plan, design, build, test, and document a complete software application while applying professional software engineering practices throughout the development process.
 
+## Business Question
+
+What do trends in inflation, unemployment, and interest rates suggest about current business conditions?
+
 ## Functional Requirements
 
 ### FR-1: Retrieve Current Economic Data
