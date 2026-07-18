@@ -12,6 +12,12 @@ This project is also intended to demonstrate my ability to plan, design, build, 
 
 What do trends in inflation, unemployment, and interest rates suggest about current business conditions?
 
+### Economic Indicators
+    
+- Inflation Rate
+- Unemployment Rate
+- Federal Funds Rate
+
 ## Functional Requirements
 
 ### FR-1: Retrieve Current Economic Data
