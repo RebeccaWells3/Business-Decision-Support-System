@@ -43,3 +43,52 @@ The biggest lesson I learned during the planning process was the value of defini
 - Finalize the application design.
 - Begin implementing the application one feature at a time.
 - Continue documenting decisions and lessons throughout development.
+
+# Entry 2 - API Analysis and Data Transformation Design
+
+**Date:** July 20, 2026
+
+## Objective
+
+Continue designing the application by analyzing the FRED API response and defining how the application should handle the data before storing it.
+
+## Decisions Made
+
+- Store only the `date` and `value` fields from each observation.
+- Exclude the `realtime_start` and `realtime_end` metadata fields.
+- Convert numeric values from strings to `float` during transformation.
+- Convert `"."` values to Python `None`, which SQLite stores as `NULL`.
+- Treat the `date` field as required.
+- Reject individual observations that are missing a `date`.
+- Stop the pipeline and notify the user if no observations are returned.
+
+## Why I Made These Decisions
+
+I wanted the application to store only the data needed to answer the business question while avoiding unnecessary information from the API response. I also wanted the application to handle missing or invalid data in a consistent way so that the database would contain reliable information for later analysis. As I evaluated different approaches, I chose the options that kept the application simpler while still meeting the project's requirements.
+
+## Alternatives Considered
+
+- Storing all fields returned by the FRED API instead of only the fields needed for analysis.
+- Keeping numeric values as strings instead of converting them before storage.
+- Converting `"."` to `0` instead of storing it as `NULL`.
+- Skipping observations with missing values instead of storing them.
+- Keeping observations without a `date` instead of rejecting them.
+- Continuing the pipeline when no observations are returned instead of stopping and notifying the user.
+
+## Challenges
+
+This session required me to make engineering and data design decisions before writing code, which was different from my previous projects. I've found that I usually understand new concepts better after implementing them, so I adjusted my approach to focus on learning the reasoning as I build the application.
+
+## Lessons Learned
+
+No major technical lessons yet. This session focused on planning the application's data handling and design decisions before implementation.
+
+## Next Steps
+
+- Set up API key security using `.env` and `.gitignore`.
+- Finalize the application's initial project structure.
+- Implement the FRED API retrieval function.
+- Begin building the data pipeline (retrieve → validate → transform → store).
+
+
+
