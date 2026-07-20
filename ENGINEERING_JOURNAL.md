@@ -90,5 +90,44 @@ No major technical lessons yet. This session focused on planning the application
 - Implement the FRED API retrieval function.
 - Begin building the data pipeline (retrieve → validate → transform → store).
 
+## Entry 3 – FRED API Integration
+**Date:** July 20, 2026
+
+### Objective
+
+My main goal was to securely set up the FRED API key and retrieve unemployment data for the project. I also wanted to understand how the API returned the data so I would know what information to store in the database.
+
+### Decisions Made
+
+1. I decided to include a `.env.example` file so the project could be shared without exposing the actual FRED API key. This also gives anyone using the project a template for setting up their own API key.
+
+2. I decided to use constants for values like the API URL and series ID because they are used throughout the program and can be updated in one place if they ever need to change.
+
+3. I decided to store only the `date` and `value` fields from the API response because those are the only pieces of information the project needs for analysis and storing the data in the database.
+
+### Why
+
+I wanted to build this part of the project with future changes in mind instead of just making it work. Keeping the API key secure, using constants for values that could change, and only storing the data the project actually needs will make the project easier to maintain as I continue building it.
+
+### Alternatives Considered
+
+I could have hardcoded the API key into the project or stored all of the data returned by the API. Instead, I chose to keep the API key secure using a `.env` file and only plan to store the data the project actually needs for analysis.
+
+### Challenges
+
+There weren't any major technical challenges during this session. The biggest challenge was keeping track of all of the new information as I worked through each step of retrieving and understanding the API data.
+
+### Lessons Learned
+
+I learned that larger projects involve a lot more planning and design decisions than the smaller projects I've worked on before. Taking the time to think through those decisions before writing more code should make the rest of the project easier.
+
+### Next Steps
+
+- Extract the `date` and `value` fields from each observation in the API response.
+
+- Store the data in a SQLite database.
+
+- Verify that the records were stored correctly before beginning the data analysis portion of the project.
+
 
 
