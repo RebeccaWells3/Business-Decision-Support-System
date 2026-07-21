@@ -45,7 +45,6 @@ The biggest lesson I learned during the planning process was the value of defini
 - Continue documenting decisions and lessons throughout development.
 
 # Entry 2 - API Analysis and Data Transformation Design
-
 **Date:** July 20, 2026
 
 ## Objective
@@ -129,5 +128,6 @@ I learned that larger projects involve a lot more planning and design decisions 
 
 - Verify that the records were stored correctly before beginning the data analysis portion of the project.
 
-
+# Entry 4- 
+**Date:** July 21-
 
