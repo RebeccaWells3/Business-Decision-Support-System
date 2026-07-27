@@ -2,7 +2,7 @@ from dotenv import load_dotenv
 import os
 from database import initialize_database
 from api_client import get_series_observations
-from analysis import analyze_data, calculate_inflation_rate
+from analysis import analyze_data, calculate_inflation_rate, interpret_economic_conditions
 
 SERIES= [
     {
@@ -73,7 +73,18 @@ def main():
 
     results = analyze_data()
 
+    latest_values = {}
+
+    for code, name, date, value in results:
+        latest_values[code] = value
+
     inflation_rate = calculate_inflation_rate()
+
+    overall_outlook, interpretations = interpret_economic_conditions(
+        inflation_rate,
+        latest_values["UNRATE"],
+        latest_values["FEDFUNDS"]
+    )
 
     print("\nCurrent Economic Conditions")
     print("-" * 30)
@@ -82,6 +93,16 @@ def main():
         print(f"{name}: {value} ({date})")
 
     print(f"Year-over-Year Inflation Rate: {inflation_rate:.2f}%")
+
+    print("\nBusiness Outlook")
+    print("------------------------------")
+    print(overall_outlook)
+
+    print("\nKey Factors")
+    print("------------------------------")
+
+    for interpretation in interpretations:
+        print(f"- {interpretation}")
 
 if __name__ == "__main__":
     main()
