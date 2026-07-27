@@ -2,6 +2,7 @@ from dotenv import load_dotenv
 import os
 from database import initialize_database
 from api_client import get_series_observations
+from analysis import analyze_data, calculate_inflation_rate
 
 SERIES= [
     {
@@ -70,6 +71,17 @@ def main():
         connection.commit()
         connection.close()
 
+    results = analyze_data()
+
+    inflation_rate = calculate_inflation_rate()
+
+    print("\nCurrent Economic Conditions")
+    print("-" * 30)
+
+    for code, name, date, value in results:
+        print(f"{name}: {value} ({date})")
+
+    print(f"Year-over-Year Inflation Rate: {inflation_rate:.2f}%")
 
 if __name__ == "__main__":
     main()
