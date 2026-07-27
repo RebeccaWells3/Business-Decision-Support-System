@@ -173,6 +173,38 @@ Another challenge was learning several new engineering concepts at the same time
 - Complete the remaining MVP features and documentation.
 - Review the project's engineering decisions so I can confidently explain them during interviews.
 
+## Entry 5 – Completing the Business Decision Support System
 
+**Date:** July 27, 2026
+
+### Objective
+
+My goal for this session was to complete the remaining features of the Business Decision Support System, review the project's documentation, and prepare it for my portfolio. I wanted to make sure the application accurately answered the original business question and that the repository was organized and documented in a professional way.
+
+### Decisions Made
+
+- I added a business interpretation layer that analyzes the economic indicators and generates an overall business outlook.
+- I updated the project requirements so they accurately reflected the completed application instead of the original plan.
+- I created a comprehensive README that explains the project's purpose, technologies, workflow, installation, and key skills demonstrated.
+
+### Why
+
+One of the biggest lessons from this project was that writing the code is only part of building software. Good documentation helps other developers, employers, and even my future self understand what the application does, how it works, and why certain engineering decisions were made.
+
+I also wanted the finished project to accurately represent what I built. Updating the requirements and documentation helped ensure that everything in the repository matched the final implementation.
+
+### Challenges
+
+The biggest challenge during the final phase wasn't writing additional code. Instead, it was deciding where to stop. There were several features that could have been added, such as a Flask web interface or data visualizations, but continuing to add features would have delayed completing the project.
+
+### Lessons Learned
+
+This project showed me the importance of defining a solid scope and finishing a complete application before adding additional features. I also learned that software engineering includes much more than programming. Planning, documentation, version control, testing, and explaining design decisions are all important parts of building professional software.
+
+Looking back over the summer, I also realized how much this project brought together skills from my previous projects while introducing me to a more complete software engineering process.
+
+### Next Steps
+
+The implementation phase of the project is complete. My next step is to review the engineering decisions behind the project and practice explaining the system, architecture, and design choices so I can confidently discuss them during internship and job interviews.
 
 
