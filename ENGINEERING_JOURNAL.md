@@ -128,6 +128,51 @@ I learned that larger projects involve a lot more planning and design decisions 
 
 - Verify that the records were stored correctly before beginning the data analysis portion of the project.
 
-# Entry 4- 
-**Date:** July 21-
+# Entry 4- Refactoring the Project and Building the Analysis Layer
+**Date:** July 21 & 27
+
+### Objective
+
+The goal of these sessions was to improve the structure of the project before continuing to add new features. I wanted to organize the code into separate modules so each file had a clear responsibility. After that, I began building the analysis portion of the project by querying the stored economic data and calculating a year-over-year inflation rate.
+
+### Decisions Made
+
+1. I moved the database initialization code into a separate `database.py` module instead of keeping everything in `main.py`.
+
+2. I created an `api_client.py` module to handle communication with the FRED API. This removed the API request logic from `main.py` and made the program easier to organize.
+
+3. I created an `analysis.py` module to keep the SQL queries and business calculations separate from the rest of the application.
+
+4. I decided to calculate the year-over-year inflation rate instead of only displaying the latest CPI value because the inflation rate provides more meaningful business information than the raw CPI index.
+
+### Why I Made These Decisions
+
+As the project grew, keeping everything in one file was becoming difficult to manage. Separating the database, API, and analysis logic into different modules made the project easier to understand and maintain.
+
+Calculating inflation instead of simply displaying the CPI value also made the application better at answering the original business question. A business user can understand an inflation percentage much more easily than a CPI index value by itself.
+
+### Challenges
+
+One of the biggest challenges during these sessions was understanding how data moved between modules. Passing values into functions and returning results took some time to fully understand.
+
+I also ran into a bug when retrieving a database ID because `fetchone()` returned a tuple instead of a single value. After I realized what was happening, indexing into the tuple fixed the problem.
+
+Another challenge was learning several new engineering concepts at the same time. We decided to stay focused on completing the project's MVP first and return to the deeper engineering discussions after the project was finished.
+
+### Lessons Learned
+
+- Refactoring changes the structure of a program without changing its behavior.
+- Separating responsibilities into different modules makes a project easier to organize and maintain.
+- Database query results are not always returned in the format I expect, so I need to understand what a query returns before using it.
+- Business applications often need calculations that transform raw data into information that is meaningful to users.
+
+### Next Steps
+
+- Interpret the economic indicators instead of only displaying their values.
+- Improve the business-focused output.
+- Complete the remaining MVP features and documentation.
+- Review the project's engineering decisions so I can confidently explain them during interviews.
+
+
+
 
